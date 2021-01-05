@@ -1,5 +1,4 @@
 import React from "react";
-//import Pokemones from "./components/Pokemones";
 import Users from "./components/Users";
 import { Provider } from "react-redux";
 import generateStore from "./redux/store";

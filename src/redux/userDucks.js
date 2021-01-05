@@ -13,6 +13,7 @@ const LOAD = "LOAD";
 const TOTAL_USERS = "TOTAL_USERS";
 const OBTAIN_USERS_SUCCESS = "OBTAIN_USERS_SUCCESS";
 const OBTAIN_USERS_ERROR = "OBTAIN_USERS_ERROR";
+const CLEAR_USERS = "CLEAR_USERS";
 
 // reducer
 export default function userReducer(state = dataInital, action) {
@@ -25,6 +26,8 @@ export default function userReducer(state = dataInital, action) {
       return { ...state, total: action.payload };
     case OBTAIN_USERS_ERROR:
       return { ...state, error: true };
+    case CLEAR_USERS:
+      return { ...state, users: true };
     default:
       return state;
   }
@@ -70,6 +73,18 @@ export const obtainUsersActionCount = (number) => async (
     dispatch({
       type: TOTAL_USERS,
       payload: res.data.total,
+    });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+export const clearUsersAction = () => async (dispatch, getState) => {
+  const { users } = getState().users;
+  try {
+    dispatch({
+      type: CLEAR_USERS,
+      payload: users.push([]),
     });
   } catch (err) {
     console.log(err);

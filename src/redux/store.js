@@ -1,10 +1,8 @@
 import { createStore, combineReducers, compose, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import pokeReducer from "./pocketDucks";
 import userReducer from "./userDucks";
 
 const rootReducer = combineReducers({
-  pokemones: pokeReducer,
   users: userReducer,
 });
 
