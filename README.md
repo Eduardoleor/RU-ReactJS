@@ -1,5 +1,5 @@
-<img src="https://drive.google.com/file/d/1SPAfaKVtUNMMHynNfrSNTGl1_g6d4QfB/view?usp=sharing" alt="preview" />
-!(image)[https://drive.google.com/file/d/1SPAfaKVtUNMMHynNfrSNTGl1_g6d4QfB/view?usp=sharing]
+
+<img src="https://drive.google.com/uc?export=view&id=1SPAfaKVtUNMMHynNfrSNTGl1_g6d4QfB" style="width: 650px; max-width: 100%; height: auto" title="Preview" />
 
 # Getting Started with Create React App
 
